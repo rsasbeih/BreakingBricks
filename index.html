@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="game-layout.css"/>
+    <title>Game</title>
+    <script src="LAB.min.js"></script>
+    <script>
+
+        $LAB
+                .script('geom/Vector2.js').wait()
+                .script('input/Keyboard.js').wait()
+                .script('input/Mouse.js').wait()
+				.script('input/Touch.js').wait()
+                .script('Canvas2D.js').wait()
+                .script('Sound.js').wait()
+                .script('system/Color.js').wait()
+                .script('system/Keys.js').wait()
+                .script('Game.js').wait()
+           //add game elements here (like Ball.js and Paddle.js)
+				.script('Paddle.js').wait()
+				.script('Ball.js').wait()
+				.script('Brick.js').wait()
+                .script('MainGameWorld.js').wait()
+                .script('MainGame.js').wait(function () {
+                    Game.start('mycanvas', 800, 480);
+                });
+
+    </script>
+</head>
+
+<body>
+<div id="gameArea">
+    <canvas id="mycanvas" width="800" height="480"></canvas>
+</div>
+</body>
+</html>
